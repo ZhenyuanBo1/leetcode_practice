@@ -1,0 +1,78 @@
+6/6 interview HE - Azure
+1. System design - short url
+2. three sum
+3. given a string, find a string in a given that’s off by 1 character
+input = "square"
+array = {"squire", "squirr", "sqqqqq", }
+4. string concatenation
+{abc, cda} return true abcda
+first word last char == second word first char
+and first word first char == second word last char
+6/7 HE - failed
+1. bit manipulation reverse a Byte[] map, flip Byte[] map  horizontally
+2. given a dependency graph, validate the batching of node
+Node
+A:
+B: A,C
+C: A
+D: C
+validate batching
+A, C, BD
+A, C, B, D
+3. merge k sorted list
+4. System design - API (database modeling of an organizati‍‌‍‌‌‍‌‌‍‍‍‍‍‍‌‍‌‍‍‍on has groups, groups has many user) write API functions to get back a list of users
+
+
+https://www.1point3acres.com/bbs/thread-941041-1-1.html
+https://leetcode.com/discuss/interview-question/system-design/1729681/Compilation-or-Microsoft-Design-Questions-or-SDE-ISDE-II
+https://www.1point3acres.com/bbs/thread-929233-1-1.html
+1. 33, 3, 224, 227, 772, 121, 122, LRU (146), cinema seat allocaiton, 2028, 1647, 273
+https://www.1point3acres.com/bbs/thread-927113-1-1.html
+https://www.1point3acres.com/bbs/thread-920464-1-1.html
+https://www.1point3acres.com/bbs/thread-920464-1-1.html
+https://www.1point3acres.com/bbs/thread-911022-1-1.html
+
+
+
+这是六月份的一道On site题，希望可以帮到大家。
+Currency Conversion
+Paramenters:
+array of currency conversion rates. E.g. ['USD', 'GBP', 0.77] which means 1 USD is equal to 0.77 GBP
+an array containing a 'from' currency and a 'to' currency
+Given the above parameters, find the conversion rate that maps to the 'from' currency to the 'to' currency.
+Your return value should be a number.
+Example:
+You are given the following parameters:
+Rates: ['USD', 'JPY', 110] ['US', 'AUD', 1.45] ['JPY', 'GBP', 0.0070]
+To/From currency ['GBP', 'AUD']
+Find the rate for the 'To/From' curency. In this case, the correct res‍‌‍‌‌‍‌‌‍‍‍‍‍‍‌‍‌‍‍‍ult is 1.89.
+第一轮面了System Design,面我的人只会Python不用Java,所以只是用SQL设计了Uber Eats的schema和一些query.
+第二轮是和Manager聊天，常见的BQ,Work Life Balance...
+第三和第四轮是Coding.
+如果大家觉得有用的话请给点大米吧！ 平时帖子都没权限看  :(
+
+刚做的OA，刷题网 腰武巴妻
+刷题网 腰巴酒午
+还有一题是 debug 题，代码写好了，找错
+给点米吧 之后分享更多
+补充内容 (2022-07-10 17:57 +8:00‍‌‍‌‌‍‌‌‍‍‍‍‍‍‌‍‌‍‍‍):
+我更正下，第一题是腰武妻巴
+
+https://leetcode.com/problems/largest-magic-square/
+https://leetcode.com/problems/game-of-life/
+
+https://www.1point3acres.com/bbs/thread-911122-1-1.html
+
+
+释流二
+咦散灵斯
+咦四零四
+前两个原题 第三题改了一下odd是subtract 1 而且test case有leading zeros 然后要求是reduce 到 0
+
+
+面的senior，63/64，根据面试表现给offer，有四轮，每一轮都是coding加BQ：
+力扣二一二
+给不同时刻不同电器的用电，问用电峰值是多少，类似于力扣二五三，用的扫面线算法
+给不同的dependency关系，以及不同pkg的build时间，找到总体时间和最关键的路径（影响总体时间的路径），类似于力扣二一零
+实现linked list需要能支持有append，find， count， remove，类似于力扣一四六的doubly linked list的视线
+每一轮都有一些BQ问题，同时会掺杂一些concurrency，distributed system，operating system等问题。最如沐春风的面试了，每个面试官都有十几‍‌‍‌‌‍‌‌‍‍‍‍‍‍‌‍‌‍‍‍年工作经验，面试过程非常愉快，没有任何赶时间的感觉。而且非常奇怪的是竟然没有系统设计，跟HR说了，好像是搞错了，但是也没有让我加面就给了offer，一开始给的是63，后面给升到64。虽然不去，但是赞一波MS的面试官！！

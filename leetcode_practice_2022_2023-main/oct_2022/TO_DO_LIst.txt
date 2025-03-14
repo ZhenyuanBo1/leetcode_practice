@@ -1,0 +1,88 @@
+1. surrounded regions
+2. check completeness of a binary tree
+3. remove all ones with row and column flips II
+4. 1396, 1244, 1740, 2225, 567, design hit counter, minimum operations to halve array sum, 2166
+5. 893, 2352, 1740, diagonal traverse, sort the matrix diagonally
+6. word pattern II, jump games III, number of orders in the backlog
+7. 1079, 698
+8. 79, 1087
+9. 751
+10. 
+tree traversal: 
+in order left -> root -> right
+pre order: root -> left -> right
+post order: left -> right -> root
+
+
+11. 2305, 1986, 394
+12. plan:
+1. backtracking
+2. tree
+3. stack
+4. heap / priority queue
+5. dp
+
+https://leetcode.com/problems/add-two-polynomials-represented-as-linked-lists/
+https://leetcode.com/problems/maximum-binary-tree-ii/
+https://leetcode.com/problems/two-sum-bsts/
+https://leetcode.com/problems/buildings-with-an-ocean-view/submissions/
+
+1. finding the number of visible mountains
+2. number of visible people in the queue
+3. binary search tree iterator
+4. zigzag iterator (done)
+5. peeking iterator
+6. flattern nested list iterator
+7. asteroid collision
+8. car place flowers
+9. destroying asteroids
+10. count collisions on a road
+11. car fleet
+12. last moment before all ants fall out of a prank
+13. 1628
+14. inorder successor in BST
+15. binary search tree iterator II (?) (done)
+16. binary tree upside down
+17. flatter nested list iterator (done)
+18. minimum time to collect all apples in a tree
+19. mini parser
+20. array nesting
+21. shortest unsorted continuous subarray
+22. 2008
+23. split two strings to make palindrome
+24. find the kth largest in the array
+25. find the kth largest integer in the array
+26. wiggle sort II
+27. k highest ranked items within a price range
+28. longest uncommon subsequence II
+29. determine if string halves are alike
+30. using a robot to print the lexicographically smallest string
+31. DP: 1653, 2289
+32. Basic Calculator (Hard)
+33. camelcase matching
+34. check if a string can break another string
+35. bold words in string
+36. maximum product of the length of two palindrome subsequence
+37. design a number container system
+38. most popular video creator
+39. minimum time to complete trips
+40. check if numbers are ascending in a sentence
+
+
+41. add binary, sum of two integers, add strings, add to array-form of integer, add two polynomials represented as linkedlist
+42. maximum of erasure value, number of equal count string, minimum consecutive cards to pick up, longest nice subarray, optimal partition of string
+43 palindromic substrings, longest palindromic subsequence
+44. mirror reflection, stone game
+45. longest substring with at least k repeating characters
+46 partition array into disjoint intervals
+47. maximum sum of distinct subarrays with length k
+48. surrounded region, walls and gates, number of connected components in an undirected graph, number of distinct islands, count sub islands, find all groups of farmland
+49. count unreachable pairs of nodes in an undirected graph
+
+
+50. 166
+
+51. add bold tag in string, check if a parenthesis string can be valid
+
+
+1081 - needs investigation

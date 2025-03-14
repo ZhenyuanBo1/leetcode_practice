@@ -1,0 +1,202 @@
+1. Next Greater Element
+
+739 - daily temperature, Next Greater Element I
+
+1). Using Stack and HashMap 
+if a new item is greater than the top value, put that in a hashmap 
+if not, place on top of the Stack
+hashmap stores the next greater element for each element
+
+2. for Matrix problem [BFS]
+
+Maze, Number of Island
+
+1). set up an object
+2). build visited boolean array
+3). build direction array
+4). build a queue
+5). use queue template to do
+
+3. clone graph / Clone N-ary Tree 
+
+BFS Method:
+1). create a visited hashmap (node, cloneNode)
+2). create a queue to store all nodes
+3). iterate through all neighbors, if visited hashmap contains this nei, put that in the children list that the clone node has; if not, create a clone node of this neighbor node
+
+Do the BFS traversal.
+
+Pop a node from the front of the queue.
+Visit all the neighbors of this node.
+If any of the neighbors was already visited then it must be present in the visited dictionary. Get the clone of this neighbor from visited in that case.
+Otherwise, create a clone and store in the visited.
+Add the clones of the neighbors to the corresponding list of the clone node.
+
+DFS Template I:
+/*
+ * Return true if there is a path from cur to target.
+ */
+boolean DFS(Node cur, Node target, Set<Node> visited) {
+    return true if cur is target;
+    for (next : each neighbor of cur) {
+        if (next is not in visited) {
+            add next to visted;
+            return true if DFS(next, target, visited) == true;
+        }
+    }
+    return false;
+}
+
+DFS Template II with Stack
+/*
+ * Return true if there is a path from cur to target.
+ */
+boolean DFS(int root, int target) {
+    Set<Node> visited;
+    Stack<Node> stack;
+    add root to stack;
+    while (s is not empty) {
+        Node cur = the top element in stack;
+        remove the cur from the stack;
+        return true if cur is target;
+        for (Node next : the neighbors of cur) {
+            if (next is not in visited) {
+                add next to visited;
+                add next to stack;
+            }
+        }
+    }
+    return false;
+}
+
+4. backtracking
+
+explore neighbors
+backtrack()
+place() on to the path
+remove() from the path when it reaches the end or there is no way to go further
+
+
+for subset type questions we use backtrack template
+
+using for loop to get the candidate
+and path.addLast(), backtrack(), and removeLast
+
+5. gcd function
+   public int gcd(int a, int b) {
+        if(b == 0){
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+
+public String gcdOfStrings(String str1, String str2) {
+	
+		//Ensure that str1 is greater than str2
+        if(str2.length() > str1.length())
+            return gcdOfStrings(str2, str1);
+			
+        //If str2 is length 0, return str1;
+        if(str2.length() == 0)
+            return str1;
+
+		/* 
+            Calculate the remainder by:
+            1. Checking to see if str1 starts with str2. 
+                If it doesn't then return the empty string. i.e. the string LEET, CODE 
+            2. Calculate the remainder substring. 
+            3. Recursively call with str2 and the remainder. 
+		*/ 
+        String remainder = "";
+        if(str1.startsWith(str2)) {
+            int remainder_loc = str1.indexOf(str2) + str2.length();
+            remainder = str1.substring(remainder_loc);
+        } else {
+            return "";
+        }
+        return gcdOfStrings(str2, remainder);
+    }
+
+6. Divide & Conquer 
+    Merge Sort
+    3 steps:
+        1). In the first step, we divide the list into two sublists.  (Divide)
+ 
+        2). Then in the next step, we recursively sort the sublists in the previous step.  (Conquer)
+ 
+        3). Finally we merge the sorted sublists in the above step repeatedly to obtain the final list of sorted elements.  (Combine)
+
+    #############TOP DOWN APPROACH #######################
+    import java.util.Arrays;
+    public class Solution {
+    
+        public int [] merge_sort(int [] input) {
+            if (input.length <= 1) {
+                return input;
+            }
+            int pivot = input.length / 2;
+            int [] left_list = merge_sort(Arrays.copyOfRange(input, 0, pivot));
+            int [] right_list = merge_sort(Arrays.copyOfRange(input, pivot, input.length));
+            return merge(left_list, right_list);
+        }
+        
+        public int [] merge(int [] left_list, int [] right_list) {
+            int [] ret = new int[left_list.length + right_list.length];
+            int left_cursor = 0, right_cursor = 0, ret_cursor = 0;
+
+            while (left_cursor < left_list.length && 
+                    right_cursor < right_list.length) {
+                if (left_list[left_cursor] < right_list[right_cursor]) {
+                ret[ret_cursor++] = left_list[left_cursor++];
+                } else {
+                ret[ret_cursor++] = right_list[right_cursor++];
+                }
+            }
+            // append what is remain the above lists
+            while (left_cursor < left_list.length) {
+                ret[ret_cursor++] = left_list[left_cursor++];
+            }
+            while (right_cursor < right_list.length) {
+                ret[ret_cursor++] = right_list[right_cursor++];
+            }  
+            return ret;
+        }
+    }
+
+*****************************
+Sliding Window problem
+*****************************
+1. if there is no specific definition of window size, we use
+for(...){
+    while(...)
+}
+while loop will execute only if the condition meets, for example greater than K distinct chars
+in the while loop, we reduce the window size until while loop condition meets
+
+2. if there is a specific definition of window size, we use
+while(...){
+    while(...)
+}
+
+in both first and second scenarios, external loop will use r (right, faster pointer)
+inner loop will use l (left, slower pointer)
+
+in 2nd scenario, the inner while loop will keep increasing its size
+once the inner loop doesn't meet condition, we calculate the min/max len and reduce left only by 1
+
+**********************
+TWO POINTERS
+**********************
+1. we usually need to sort the array first and one pointer starts from 
+the beginning and the other one starts from the end
+2. sometimes, it is treated as a slide window problem
+
+**********************
+HEAP
+**********************
+The time complexity of adding an element in a heap of size k is O(logk), and we do it N times that means
+O(Nlogk) time complexity for the algorithm.
+smallest comes first
+PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
+largest comes first
+PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a,b)->b-a);
